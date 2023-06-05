@@ -1,0 +1,40 @@
+.item{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    aspect-ratio: 2/3.5;
+   border: coral 2px solid;
+   border-bottom-left-radius: 20px;
+   border-bottom-right-radius: 20px;
+   overflow: hidden;
+   background-color: white;
+  }
+  .item .title{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 0 10px;
+  }
+  .item .price{
+    margin-top: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: white;
+    background-color: coral;
+  }
+  .item img{
+    border-bottom: 2px solid coral;
+    max-width: 100%;
+    aspect-ratio: 4/4;
+    object-fit: contain;
+  }
+  .item:hover >  .price {
+    transition: ease-in 600ms;
+    scale: 110%;
+  }
+  .item .description{
+    padding: 10px;
+    flex: 1;
+    overflow-y: hidden;
+  }

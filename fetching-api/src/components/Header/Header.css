@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.LogoText{
+  font-weight: bolder;
+  color: white;
+  font-size: 1.5rem;
+}
+.store{
+  background-color: orange;
+  color: white;
+  padding: 4px 10px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+header {
+  position: relative;
+  top: 0;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 50px ;
+  background-color: coral;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+.nav-ul {
+ width: 70%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav-li .active {
+  color: white;
+  background-color: coral;
+}
+.nav-li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+.nav-li a:not(.active):hover{
+  border-color: orange;
+}
+.nav-li a {
+  background-color: white;
+  min-width: 110px;
+  height: 100%;
+  padding: 5px  10px;
+  border-radius: 50px;
+  border: 2px solid white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  color: coral;
+}

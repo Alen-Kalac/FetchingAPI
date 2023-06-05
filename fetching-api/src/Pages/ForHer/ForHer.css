@@ -1,0 +1,16 @@
+.ForHer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .ForHer-content {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  
