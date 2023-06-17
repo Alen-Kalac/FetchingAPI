@@ -4,7 +4,6 @@ import ForHim from './Pages/ForHim/ForHim.js';
 import ForHer from './Pages/ForHer/ForHer.js';
 import Jewelry from './Pages/Jewelry/Jewelry.js';
 import Electronics from './Pages/Electronics/Electronics.js';
-
 import { Route, Routes } from 'react-router-dom';
 
 

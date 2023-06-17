@@ -1,27 +1,26 @@
 import "./Home.css";
-import { useState,useEffect } from "react";
 import Header from "../../components/Header/Header";
 import ItemCard from "../../components/ItemCard/ItemCard";
 import axios from 'axios'
+import { useQuery } from "react-query";
 
-function Home() {
-  const [data, setData] = useState([])
+const FetchData = async () => {
+        const response = await axios.get('https://fakestoreapi.com/products')
+        const  data = response.data
+        return data
+}
+const Home = () =>{
+  const {data,isLoading,isError,error} = useQuery('products',FetchData)
 
-  const FetchData = async () => {
-      try {
-          const response = await axios.get('https://fakestoreapi.com/products')
-          setData(response.data)
-      }
-      catch(error){
-          console.log(error)
-      }
+  if(isLoading){
+    return <div className="loader"> Loading ...</div>
   }
-
-  useEffect(() => {
-      FetchData()
-  }, [])
+  if(isError){
+    <div>Error : {error.message} </div>
+  }
+  
   return (
-    <div className="home">
+     <div className="home">
       <Header />
       <div className="home-content">
       {data.map((product) => (
@@ -35,7 +34,9 @@ function Home() {
         ))}
       </div>
     </div>
-  );
+  )
 }
+
+  
 
 export default Home;

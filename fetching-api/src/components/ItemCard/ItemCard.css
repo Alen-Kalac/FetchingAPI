@@ -1,5 +1,5 @@
 .item{
-    margin: 10px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     width: 320px;
@@ -24,17 +24,18 @@
     background-color: coral;
   }
   .item img{
-    border-bottom: 2px solid coral;
+    border-bottom: 2px solid rgb(255, 127, 80);
     max-width: 100%;
     aspect-ratio: 4/4;
     object-fit: contain;
   }
-  .item:hover >  .price {
+  .item:hover {
     transition: ease-in 600ms;
+    box-shadow: -2px 2px 28px 0px rgb(255, 127, 80,0.75);
     scale: 110%;
   }
   .item .description{
     padding: 10px;
     flex: 1;
-    overflow-y: hidden;
+    overflow: hidden;
   }

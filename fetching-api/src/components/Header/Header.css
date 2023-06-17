@@ -31,6 +31,7 @@ header {
   background-color: coral;
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
+  margin-bottom: 50px;
 }
 .nav-ul {
  width: 70%;
@@ -47,6 +48,7 @@ header {
   flex: 1;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 .nav-li a:not(.active):hover{
   border-color: orange;
