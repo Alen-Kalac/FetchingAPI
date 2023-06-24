@@ -1,25 +1,25 @@
 import "./ForHer.css";
-import { useState,useEffect } from "react";
+import { useQuery } from "react-query";
 import Header from "../../components/Header/Header";
 import ItemCard from "../../components/ItemCard/ItemCard";
 import axios from 'axios'
 
+const FetchData = async () => {
+  const response = await axios.get("https://fakestoreapi.com/products/category/women's%20clothing")
+  const  data = response.data
+  return data
+}
 function ForHer() {
-  const [data, setData] = useState([])
+  const {data,isLoading,isError,error} = useQuery('products',FetchData)
 
-  const FetchData = async () => {
-      try {
-          const response = await axios.get("https://fakestoreapi.com/products/category/women's%20clothing")
-          setData(response.data)
-      }
-      catch(error){
-          console.log(error)
-      }
+  if(isLoading){
+    return <div className="loader"> Loading ...</div>
+  }
+  if(isError){
+    <div>Error : {error.message} </div>
   }
 
-  useEffect(() => {
-      FetchData()
-  }, [])
+
   return (
     <div className="ForHer">
       <Header />

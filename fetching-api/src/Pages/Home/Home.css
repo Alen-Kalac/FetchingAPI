@@ -14,10 +14,4 @@
   align-items: flex-start;
   justify-content: space-evenly;
 }
-.loader{
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
